@@ -1,5 +1,9 @@
 if not getgenv or typeof(getgenv) ~= "function" or getgenv().PahTeTKey ~= "PahTeT-Access-Core-918X" then
-	warn("❌ Invalid or missing key")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Access Denied",
+		Text = "Missing or invalid key.",
+		Duration = 5
+	})
 	return
 end
 
